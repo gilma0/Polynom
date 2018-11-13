@@ -48,8 +48,8 @@ public class Test {
 		System.out.println(dugma6);
 		System.out.println(dugma6.area(0, 2, 0.0001)); //polynom area function
 */
-		Polynom test = new Polynom ("-1*X^1");
-		System.out.println(test.area(1, 2, 0.0001) > -1.58 || test.area(1, 2, 0.0001) < -1.492);
+		Polynom test = new Polynom ("2*X^3-1*X^4");
+		System.out.println(test.root2(1, 4, 0.01));
 	}
 
 }
