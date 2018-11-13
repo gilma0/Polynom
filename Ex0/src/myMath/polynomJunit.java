@@ -71,17 +71,34 @@ class polynomJunit {
 
 	@Test
 	void testMultiply() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("2*X^3");
+		Polynom tester = new Polynom ("6*X^1");
+		test.multiply(tester);
+		Polynom answer = new Polynom ("12*X^4");
+		if (!test.equals(answer)) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testEqualsPolynom_able() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("5*X^1");
+		Polynom tester = new Polynom();
+		Monom temp = new Monom ("5*X^1");
+		tester.add(temp);
+		boolean answer = test.equals(tester);
+		if (answer != true) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testIsZero() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("0*X^3-0*X^2");
+		boolean tester = false;
+		if(test.isZero() == tester) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
