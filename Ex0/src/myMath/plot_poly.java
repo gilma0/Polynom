@@ -16,7 +16,7 @@ public class plot_poly {
 	
 	public static void main(String[] args) throws IOException { 
 		Polynom test = new Polynom ("0.2*X^4-1.5*X^3+3.0*X^2-1*X^1-5");
-		double eps = 0.1;
+		double eps = 0.01;
 		double start = -2;
 		double end = 6;
 		ArrayList<Double> xxdata = new ArrayList<Double>();
