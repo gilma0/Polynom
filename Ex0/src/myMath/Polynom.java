@@ -207,6 +207,14 @@ public class Polynom implements Polynom_able{
 		}
 		return Integer.MAX_VALUE; //if we get here no answer has been found
 	}
+/*	public double root2(double x0, double x1, double eps) {
+		double left = this.f(x0);
+		double right = this.f(x1);
+		if (left >= right) {
+			
+		}
+		
+	}*/
 	/**
 	 * deep copies a given polynom.
 	 * @return the copied polynom.

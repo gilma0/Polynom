@@ -103,22 +103,35 @@ class polynomJunit {
 
 	@Test
 	void testRoot() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("1*X^1");
+		if (test.root(-1, 1, 0.5) > 0.5) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testCopy() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("2*X^3-3*X^1");
+		if (!test.equals(test.copy())) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testDerivative() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("5*X^3");
+		Polynom answer = new Polynom ("15*X^2");
+		if (!answer.equals(test.derivative())) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testArea() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("1*X^1");
+		if (test.area(1, 2, 0.0001) > 1.58 || test.area(1, 2, 0.0001) < 1.42) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
