@@ -49,7 +49,7 @@ public class Test {
 		System.out.println(dugma6.area(0, 2, 0.0001)); //polynom area function
 */
 		Polynom test = new Polynom ("2*X^3-1*X^4");
-		System.out.println(test.root2(1, 4, 0.01));
+		System.out.println(test.root(1, 4, 0.01));
 	}
 
 }

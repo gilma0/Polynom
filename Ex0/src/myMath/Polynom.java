@@ -199,39 +199,19 @@ public class Polynom implements Polynom_able{
 	 * @param eps epsilon precision
 	 * @return the value of the polynom at the root according to the epsilon
 	 */
-	public double root(double x0, double x1, double eps){ //calculating root answers for the polynom within a certain epsilon
-		for (double place = x0; place <=x1; place = place + 0.0001) {
-			if (Math.abs(this.f(place)) < eps) {
-				return place;
-			}
-		}
-		return Integer.MAX_VALUE; //if we get here no answer has been found
-	}
-	public double root2(double x0, double x1, double eps) {
-		double mid = (x0+x1)/2;
-		if (Math.abs(this.f(mid)) <= eps) {
+	public double root(double x0, double x1, double eps) {
+		double mid = (x0+x1)/2; //calculating mid
+		if (Math.abs(this.f(mid)) <= eps) { //checking for answer
 			return mid;
 		}
-		if ((this.f(x0) > 0 && this.f(mid) < 0) || (this.f(x0) < 0 && this.f(mid) > 0)) {
-			return root2(x0,mid,eps);
+		if ((this.f(x0) > 0 && this.f(mid) < 0) || (this.f(x0) < 0 && this.f(mid) > 0)) { //checking which side to check
+			return root(x0,mid,eps);
 		}
 		else {
-			return root2(mid,x1,eps);
+			return root(mid,x1,eps);
 		}
 	}
-	
-	public double root3(double x0, double x1, double eps) {
-		double mid = (x0 + x1)/2;
-		if(Math.abs(f(mid)) < eps) {
-			return mid;
-		}
-		if((this.f(x0) > 0 && this.f(mid) < 0) || (this.f(x0) < 0 && this.f(mid) > 0)) {
-			return root3(x0, mid, eps);
-		}
-		else {
-			return root3(mid, x1, eps);
-		}
-	}
+
 	/**
 	 * deep copies a given polynom.
 	 * @return the copied polynom.
