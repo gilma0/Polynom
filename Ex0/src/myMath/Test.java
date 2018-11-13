@@ -47,7 +47,7 @@ public class Test {
 		System.out.println(dugma7.derivative()); //polynom derivative function
 		System.out.println(dugma6);
 		System.out.println(dugma6.area(0, 2, 0.0001)); //polynom area function
-		
+
 	}
 
 }

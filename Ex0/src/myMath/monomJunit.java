@@ -94,13 +94,4 @@ class monomJunit {
 		}
 	}
 
-	@Test
-	void testToString() {
-		Monom test = new Monom(2,2);
-		String tester = "2*X^2";
-		if (test.toString().equals(tester)) {
-			fail("Not yet implemented");
-		}
-	}
-
 }
