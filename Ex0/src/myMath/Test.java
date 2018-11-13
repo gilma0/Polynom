@@ -6,7 +6,7 @@ public class Test {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-/*		double a = 12;
+		double a = 12;
 		int b = 2;
 		Monom dugma1 = new Monom (a,b); //first monom constructor
 		System.out.println(dugma1);
@@ -47,7 +47,6 @@ public class Test {
 		System.out.println(dugma7.derivative()); //polynom derivative function
 		System.out.println(dugma6);
 		System.out.println(dugma6.area(0, 2, 0.0001)); //polynom area function
-*/
 		Polynom test = new Polynom ("2*X^3-1*X^4");
 		System.out.println(test.root(1, 4, 0.01));
 	}
