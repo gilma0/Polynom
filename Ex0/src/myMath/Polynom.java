@@ -202,7 +202,7 @@ public class Polynom implements Polynom_able{
 	public double root(double x0, double x1, double eps) {
 		double mid = (x0+x1)/2; //calculating mid
 		if (Math.abs(this.f(mid)) <= eps) { //checking for answer
-			return mid;
+			return this.f(mid);
 		}
 		if ((this.f(x0) > 0 && this.f(mid) < 0) || (this.f(x0) < 0 && this.f(mid) > 0)) { //checking which side to check
 			return root(x0,mid,eps);
