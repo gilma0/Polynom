@@ -36,6 +36,7 @@ public class plot_poly {
 			xData[i] = iterX.next();
 			yData[i] = iterY.next();
 		}
+		System.out.println(test.area(-0.941, 4.831, 0.01));
 
 		// Create Chart
 		XYChart chart = QuickChart.getChart("Sample Chart", "X", "Y", "y(x)", xData, yData);

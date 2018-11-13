@@ -183,6 +183,9 @@ public class Polynom implements Polynom_able{
 	 * @return true if the polynom equal to 0, false otherwise.
 	 */
 	public boolean isZero(){
+		if(this.polynom.isEmpty()) {
+			return true;
+		}
 		Iterator <Monom> iter = this.polynom.iterator();
 		while (iter.hasNext()) {
 			Monom temp = new Monom (iter.next());
