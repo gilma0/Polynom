@@ -2,6 +2,8 @@ package myMath;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Iterator;
+
 import org.junit.jupiter.api.Test;
 
 class polynomJunit {
@@ -136,12 +138,17 @@ class polynomJunit {
 
 	@Test
 	void testIteretor() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
+		Polynom test = new Polynom ("5*X^3");
+		Monom tester = new Monom ("5*X^3");
+		Iterator<Monom> temp = test.iteretor();
+		Monom answer = new Monom(temp.next());
+		boolean answer2 = true;
+		if (answer.get_coefficient() != tester.get_coefficient() || answer.get_power() != tester.get_power()) {
+			answer2 = false;
+		}
+		if (answer2 == false) {
+			fail("Not yet implemented");
+		}
 	}
 
 }
