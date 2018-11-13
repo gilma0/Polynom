@@ -27,47 +27,80 @@ class monomJunit {
 
 	@Test
 	void testMonom() {
-		fail("Not yet implemented");
+		Monom test = new Monom();
+		if(test.get_coefficient() != 0 || test.get_power() != 0) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testMonomString() {
-		fail("Not yet implemented");
+		Monom test = new Monom ("2*X^3");
+		if (test.get_coefficient() != 2 || test.get_power() != 3) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testGet_coefficient() {
-		fail("Not yet implemented");
+		Monom test = new Monom (2,3);
+		if (test.get_coefficient() != 2) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testGet_power() {
-		fail("Not yet implemented");
+		Monom test = new Monom(2,3);
+		if (test.get_power() != 3) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testF() {
-		fail("Not yet implemented");
+		Monom test = new Monom (1,1);
+		if (test.f(3) != 3) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testDerivative() {
-		fail("Not yet implemented");
+		Monom test = new Monom (2,2);
+		test.derivative();
+		if (test.get_coefficient() != 4 || test.get_power() != 1) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testAdd() {
-		fail("Not yet implemented");
+		Monom test = new Monom(2,3);
+		Monom test2 = new Monom(5,3);
+		test.add(test2);
+		if (test.get_coefficient() != 7 || test.get_power() != 3) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testMultiply() {
-		fail("Not yet implemented");
+		Monom test = new Monom(2,1);
+		Monom test2 = new Monom(3,2);
+		test.multiply(test2);
+		if (test.get_coefficient() != 6 || test.get_power() != 3) {
+			fail("Not yet implemented");
+		}
 	}
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		Monom test = new Monom(2,2);
+		String tester = "2*X^2";
+		if (test.toString().equals(tester)) {
+			fail("Not yet implemented");
+		}
 	}
 
 }
