@@ -16,7 +16,7 @@ public class plot_poly {
 	
 	public static void main(String[] args) throws IOException { 
 		Polynom test = new Polynom ("0.2*X^4-1.5*X^3+3.0*X^2-1*X^1-5");
-		double eps = 0.01;
+		double eps = 0.1;
 		double start = -2;
 		double end = 6;
 		ArrayList<Double> xxdata = new ArrayList<Double>();
@@ -24,6 +24,15 @@ public class plot_poly {
 		while (start <= end) {
 			xxdata.add(start);
 			yydata.add(test.f(start));
+			if ((test.f(start-eps) >= test.f(start) && test.f(start+eps) >= test.f(start)) || (test.f(start-eps) <= test.f(start) && test.f(start+eps) <= test.f(start))) {
+				xxdata.add(start);
+				yydata.add(test.f(start) + 0.5);
+				xxdata.add(start);
+				yydata.add(test.f(start) - 0.5);
+				xxdata.add(start);
+				yydata.add(test.f(start));
+				
+			}
 			start = start + eps;
 		}
 		System.out.println(xxdata);

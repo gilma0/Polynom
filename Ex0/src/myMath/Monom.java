@@ -14,6 +14,9 @@ public class Monom implements function{
 	 * @param b given power
 	 */
 	public Monom(double a, int b){
+		if (b < 0) {
+			throw new RuntimeException("power cant be nagative");
+		}
 		this.set_coefficient(a);
 		this.set_power(b);
 	}
