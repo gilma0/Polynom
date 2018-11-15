@@ -11,7 +11,7 @@ import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
 public class plot_poly {
 	
-	//this part of the project uses XChart from github and need to be added in order for it to work: https://github.com/knowm/XChart
+	//this part of the project uses XChart from github and it needs to be added in order for it to work: https://github.com/knowm/XChart
 	
 	
 	public static void main(String[] args) throws IOException { 
