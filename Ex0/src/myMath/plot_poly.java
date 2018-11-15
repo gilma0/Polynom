@@ -76,9 +76,11 @@ public class plot_poly {
 			yData[i] = iterY.next();
 		}
 		System.out.println("the area as asked is: "+test.area(-0.941, 4.831, 0.01));
+		DecimalFormat dfArea = new DecimalFormat("#.####");
+		String area = dfArea.format(test.area(-0.941, 4.831, 0.01))+"";
 
 		// Create Chart
-		XYChart chart = QuickChart.getChart("Sample Chart", "X", "Y", "y(x)" + "\n"+ "Min points: " + min + "\n" + "Max points: " + max, xData, yData);
+		XYChart chart = QuickChart.getChart("Sample Chart", "X", "Y", "y(x)" + "\n"+ "Min points: " + min + "\n" + "Max points: " + max + "\n" + "Area as asked: " + area, xData, yData);
 
 		// Show it
 		new SwingWrapper(chart).displayChart();
