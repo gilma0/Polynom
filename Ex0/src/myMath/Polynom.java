@@ -26,6 +26,9 @@ public class Polynom implements Polynom_able{
 	 * @param p1 the given polynom
 	 */
 	public void add(Polynom_able p1){ //adding polynom to other polynom for each element
+		if (p1 == null) {
+			throw new RuntimeException ("null polynom");
+		}
 		Iterator <Monom> iter = p1.iteretor();
 		while (iter.hasNext()) { 
 			Monom temp = new Monom (iter.next()); 
@@ -39,6 +42,9 @@ public class Polynom implements Polynom_able{
 	 * @param m1 given polynom
 	 */
 	public void add(Monom m1){ // adding momon to polynom
+		if (m1 == null) {
+			throw new RuntimeException ("null monom");
+		}
 		if(m1.get_coefficient() == 0) { //checking if there's no need to add
 			return;
 		}
@@ -105,18 +111,24 @@ public class Polynom implements Polynom_able{
 	 * @param p1 given polynom
 	 */
 	public void substract(Polynom_able p1){ //substracting this polynom with another one
-			Iterator <Monom> iter2 = p1.iteretor();
-			while (iter2.hasNext()) {
-				Monom temp = new Monom (iter2.next());
-				Monom temp2 = new Monom ((-1)*temp.get_coefficient(), temp.get_power()); //making each element of the entered polynom a -.
-				this.add(temp2);
-			}
+		if (p1 == null) {
+			throw new RuntimeException ("null polynom");
+		}
+		Iterator <Monom> iter2 = p1.iteretor();
+		while (iter2.hasNext()) {
+			Monom temp = new Monom (iter2.next());
+			Monom temp2 = new Monom ((-1)*temp.get_coefficient(), temp.get_power()); //making each element of the entered polynom a -.
+			this.add(temp2);
+		}
 	}
 	/**
 	 * Multiply two polynoms
 	 * @param p1 the polynom you want to multiply on this polynom
 	 */
 	public void multiply(Polynom_able p1){
+		if (p1 == null) {
+			throw new RuntimeException ("null polynom");
+		}
 		Iterator <Monom> iter = this.iteretor();
 		Iterator <Monom> iter2 = p1.iteretor();
 		Polynom ans = new Polynom(); //answer polynom
@@ -147,6 +159,9 @@ public class Polynom implements Polynom_able{
 	 * @return true if this polynom is equal to p1. false otherwise
 	 */
 	public boolean equals (Polynom_able p1){
+		if (p1 == null) {
+			throw new RuntimeException ("null polynom");
+		}
 		this.polynom.sort(sort); //sorting the polynom for easier checking
 		Polynom a = new Polynom(); //making new polynom for entered one to work
 		a.add(p1);
@@ -183,6 +198,9 @@ public class Polynom implements Polynom_able{
 	 * @return true if the polynom equal to 0, false otherwise.
 	 */
 	public boolean isZero(){
+		if (this.polynom == null) {
+			throw new RuntimeException ("null polynom");
+		}
 		if(this.polynom.isEmpty()) {
 			return true;
 		}

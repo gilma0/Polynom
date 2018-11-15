@@ -11,7 +11,7 @@ import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
 public class plot_poly {
 	
-	
+	//this part of the project uses XChart from github and need to be added in order for it to work:
 	
 	
 	public static void main(String[] args) throws IOException { 
@@ -23,7 +23,7 @@ public class plot_poly {
 		ArrayList<Double> yydata = new ArrayList<Double>();
 		while (start <= end) {
 			xxdata.add(start);
-			yydata.add(test.f(start));
+			yydata.add(test.f(start)); //testing for min max points
 			if ((test.f(start-eps) >= test.f(start) && test.f(start+eps) >= test.f(start)) || (test.f(start-eps) <= test.f(start) && test.f(start+eps) <= test.f(start))) {
 				xxdata.add(start);
 				yydata.add(test.f(start) + 0.5);
