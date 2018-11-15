@@ -280,7 +280,7 @@ public class Polynom implements Polynom_able{
 			iter = this.polynom.iterator();
 			nowanswer = 0;
 		}
-		return sum;
+		return Math.abs(sum);
 	}
 		/** 
 		 * creating a iterator for this polynom

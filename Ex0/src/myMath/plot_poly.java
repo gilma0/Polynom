@@ -47,7 +47,7 @@ public class plot_poly {
 				yydata.add(test.f(start) - 0.5);
 				xxdata.add(start);
 				yydata.add(test.f(start));
-				DecimalFormat df = new DecimalFormat("#.##");
+				DecimalFormat df = new DecimalFormat("###.##");
 				maxX.add(df.format(start));
 				maxY.add(df.format(test.f(start)));
 			}
@@ -76,7 +76,7 @@ public class plot_poly {
 			yData[i] = iterY.next();
 		}
 		System.out.println("the area as asked is: "+test.area(-0.941, 4.831, 0.01));
-		DecimalFormat dfArea = new DecimalFormat("#.####");
+		DecimalFormat dfArea = new DecimalFormat("###.####");
 		String area = dfArea.format(test.area(-0.941, 4.831, 0.01))+"";
 
 		// Create Chart
